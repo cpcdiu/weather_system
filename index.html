@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- <meta http-equiv="refresh" content="1"> -->
+    <title>Live Weather</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="w-full py-[140px] border border-red-400 mx-auto  bg-[#9fcbd9] flex flex-col items-center justify-center " >
+     <h1 id="place_name" class=" font-extrabold text-4xl text-[#334e68]">HEllO</h1>
+     <div class="w-[200px] h-[200px] rounded-md flex items-center justify-center mt-5">
+         
+        <img id="weather_icon" src="assets/tom_and_jerry_PNG5.png" alt="">
+     </div>
+        <h2 id="tempareture" class="text-[#334e68] font-extrabold text-2xl">See Weather</h2>
+        <div>
+            
+            <div class="flex items-center justify-center gap-2">
+
+                <div class="w-[100px] h-[100px]  rounded-md flex flex-col items-center justify-center">
+                    <h3 id="humidity" class="text-[#334e68]"></h3>
+                    <img class="h-[35px] w-[35px]" src="assets/humidity.png" alt="">
+                    <h3 class="text-[#334e68]">Humidity</h3>
+                </div>
+
+                <div class="w-[100px] h-[100px]  rounded-md flex flex-col items-center justify-center">
+                    <h3 id="pressure" class="text-[#334e68]"></h3>
+                    <img class="h-[40px] w-[40px]" src="assets/atmosphere_pressure_weather_forecast_rain_sun-512.png" alt="">
+                    <h3 class="text-[#334e68]" >Pressure</h3>
+                </div>
+
+                <div class="w-[100px] h-[100px]  rounded-md flex flex-col items-center justify-center">
+                    <h3 id="wind_speed" class="text-[#334e68]"></h3>
+                    <img class="h-[35px] w-[35px]" src="assets/wind.png" alt="">
+                    <h3 id="" class="text-[#334e68]">Wind Speed</h3>
+                </div>
+</div>
+                       <!-- div for search bar  -->
+<div class="flex  items-center justify-center gap-2 mt-4">
+    <input class="bg-[#5691a4] text-[#334e68] rounded-lg pl-2 w-[260px]" id="city" type="text" placeholder="Search City">
+    <button  id="search-button" onclick="getWeather()" class=" w-5 h-5 bg-[#5691a4] rounded rounded-full text-[#334e68]">
+        <img src="assets/search.png" alt="">
+    </button>
+</div>
+                
+                
+
+            
+        </div>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>
