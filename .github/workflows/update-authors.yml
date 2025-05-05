@@ -1,0 +1,25 @@
+name: Update AUTHORS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-authors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate AUTHORS file
+        run: |
+          git log --format='%aN <%aE>' | sort -u > AUTHORS
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add AUTHORS
+          git commit -m "Update AUTHORS file"
+          git push
+        continue-on-error: true 
